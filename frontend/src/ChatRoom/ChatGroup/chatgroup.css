@@ -1,0 +1,124 @@
+.group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin: 4px 0; /* 컴포넌트 간 간격 */
+    position: relative;
+    cursor: pointer; /* hover된 경우 클릭 가능하도록 커서 변경 */
+}
+
+.group-item:hover {
+    background-color: #f1f1f1; /* hover된 경우 배경색 변경 */
+}
+
+.current-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ddd;
+    margin: 4px 0; /* 컴포넌트 간 간격 */
+    position: relative;
+}
+
+.group-content {
+    display: flex;
+    align-items: center;
+}
+
+.group-icon {
+    font-size: 24px;
+    color: #666;
+    margin-right: 5px;
+}
+
+.group-name {
+    font-size: 14px;
+    color: #333;
+    flex-grow: 1; /* 이름이 여유 공간을 채우도록 */
+}
+
+.group-close-button {
+    position: absolute; /* 오른쪽 상단 배치를 위해 */
+    top: -5px;
+    right: -5px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+}
+
+.group-close-button:hover {
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* 팝업 오버레이 */
+.popup-overlay {
+    position: fixed; /* 화면 전체를 덮도록 고정 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 어두운 반투명 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 팝업 내용 */
+.popup-content {
+    max-height: 70vh;
+    /* 팝업의 최대 높이를 화면의 70%로 제한 */
+    overflow-y: auto;
+    /* 내용이 넘칠 경우 스크롤 추가 */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* 메인 콘텐츠 */
+.header, .chat-header, .footer {
+    z-index: auto; /* 메인 콘텐츠의 기본 레이어 */
+}
+
+/* 예 버튼 */
+.yes-button {
+    width: 150px;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #FF8C42;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.yes-button:hover {
+    background-color: #E67E3A;
+}
+
+/* 아니오 버튼 */
+.no-button {
+    width: 150px;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #e3e1e1;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.no-button:hover {
+    background-color: #d4d2d2;
+}

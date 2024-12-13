@@ -1,0 +1,345 @@
+/* Wrapper 스타일 */
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff4e6;
+  /* 배경색 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container 스타일 */
+.container {
+  width: 90%;
+  height: 90%;
+  background-color: #fff4e6;
+  /* 배경색 */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 100px;
+  align-items: center;
+}
+
+/* 검색바 스타일 */
+.search-bar {
+  width: calc(100% - 16px);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f4e1d2;
+  /* 검색바 배경색 */
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #fff;
+  /* 입력창 배경색 */
+  box-sizing: border-box;
+}
+
+.search-bar button {
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff8c42;
+  /* 버튼 배경색 */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.creatroom-button:hover {
+  cursor: pointer;
+}
+
+/* 채팅방 목록 스타일 */
+.chat-list {
+  flex: 1;
+  width: 100%;
+  max-height: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.chat-room {
+  position: relative;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #f4e1d2;
+  /* 채팅방 항목 배경색 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.chat-room:hover {
+  cursor: pointer;
+}
+
+.contains-chat-room {
+  position: relative;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #d7c7ba;
+  /* 채팅방 항목 배경색 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+/* 채팅방 정보 스타일 */
+.room-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room-info div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.room-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.room-info p {
+  margin: 4px 0;
+  color: #666;
+}
+
+.room-info span {
+  font-size: 14px;
+  color: #999;
+}
+
+.status-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #ff6f61; /* 배경색 */
+  color: #fff; /* 글자색 */
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* 모달 스타일 */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  /* 반투명 배경 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff4e6;
+  /* 팝업 배경색 */
+  padding: 20px;
+  border-radius: 16px;
+  /* 둥근 모서리 */
+  text-align: center;
+  min-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* 그림자 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 버튼 그룹 스타일 */
+.button-group {
+  display: flex;
+  /* 플렉스 박스 사용 */
+  justify-content: center;
+  /* 중앙 정렬 */
+  gap: 10px;
+  /* 버튼 간격 */
+  width: 100%;
+  /* 버튼 그룹의 전체 폭 */
+  margin-top: 20px;
+  /* 텍스트와 버튼 그룹 간격 */
+}
+
+/* 버튼 기본 스타일 */
+/* 버튼 공통 스타일 (특정 클래스 이름 사용) */
+.modal-button {
+  display: flex;
+  /* 플렉스 박스 사용 */
+  justify-content: center;
+  /* 텍스트를 가로 방향으로 중앙 정렬 */
+  align-items: center;
+  /* 텍스트를 세로 방향으로 중앙 정렬 */
+  width: 100px;
+  /* 고정된 버튼 너비 */
+  height: 50px;
+  /* 고정된 버튼 높이 */
+  font-size: 16px;
+  /* 글씨 크기 */
+  border: none;
+  border-radius: 8px;
+  /* 둥근 모서리 */
+  font-weight: bold;
+  /* 글씨 굵기 */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+/* 생성 버튼 스타일 */
+.create-button {
+  background: linear-gradient(90deg, #ff8c42, #ffa657);
+  /* 생성 버튼 그라데이션 */
+  color: white;
+  /* 텍스트 색상 */
+}
+
+.create-button:hover {
+  background: linear-gradient(90deg, #e07738, #ff8c42);
+  /* 호버 시 배경색 */
+  transform: translateY(-2px);
+  /* 살짝 올라감 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* 그림자 */
+}
+
+/* 취소 버튼 스타일 */
+.cancel-button {
+  background: #cccccc;
+  /* 취소 버튼 배경색 */
+  color: white;
+  /* 텍스트 색상 */
+}
+
+.cancel-button:hover {
+  background: #bbbbbb;
+  /* 호버 시 배경색 */
+  transform: translateY(-2px);
+  /* 살짝 올라감 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* 그림자 */
+}
+
+/* 참가 버튼 스타일 */
+.join-button {
+  background: linear-gradient(90deg, #ff8c42, #ffa657);
+  /* 참가 버튼 그라데이션 */
+  color: white;
+  /* 텍스트 색상 */
+}
+
+.join-button:hover {
+  background: linear-gradient(90deg, #e07738, #ff8c42);
+  /* 호버 시 배경색 */
+  transform: translateY(-2px);
+  /* 살짝 올라감 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* 그림자 */
+}
+
+/* 닫기 버튼 스타일 */
+.close-button {
+  background: #cccccc;
+  /* 닫기 버튼 배경색 */
+  color: white !important; 
+  /* 텍스트 색상 */
+}
+
+.close-button:hover {
+  background: #bbbbbb;
+  /* 호버 시 배경색 */
+  transform: translateY(-2px);
+  /* 살짝 올라감 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* 그림자 */
+}
+
+/* 입력 필드 스타일 */
+.input-group {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* 추가: 팝업 내부 텍스트 스타일 */
+.modal-content h2.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* 로딩 중 텍스트를 중앙에 띄우는 스타일 */
+.is-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 중앙 정렬 */
+  background-color: rgba(255, 248, 235, 0.9); /* 콘텐츠 영역 배경 반투명 베이지 */
+  padding: 20px 40px; /* 텍스트 주변 여백 */
+  border-radius: 10px; /* 부드러운 모서리 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+  text-align: center;
+}
+
+/* "로딩 중" 텍스트 스타일 */
+.is-loading span {
+  font-size: 1.8rem; /* 적당히 큰 글씨 크기 */
+  font-weight: bold; /* 강조된 텍스트 */
+  color: #FF914D; /* 오렌지 컬러로 강조 */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* 약간의 그림자 */
+}

@@ -1,0 +1,80 @@
+.chat-message-container {
+    display: flex;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.avatar-message {
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+    color: black;
+    text-align: left;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column; /* 세로 방향 정렬 */
+    width: 100%; /* 부모 컨테이너 전체 차지 */
+}
+
+.sender .message-content {
+    /* 보낸 사람 오른쪽 정렬 */
+    align-items: flex-end;
+}
+
+.receiver .message-content {
+    /* 수신자 왼쪽 정렬 */
+    align-items: flex-start;
+}
+
+.chat-message {
+    color: black;
+    position: relative;
+    border-radius: 10px;
+    width: auto;
+    max-width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    text-align: left;
+
+    /* 텍스트 개행 관련 속성 */
+    word-wrap: break-word; /* 단어가 길 때 강제 줄바꿈 */
+    overflow-wrap: break-word; /* 모던 브라우저용 */
+    white-space: normal; /* 텍스트 줄바꿈 허용 */
+}
+
+.sender .chat-message {
+    background-color: #f4be53;
+}
+.receiver .chat-message {
+    background-color: #f4e1d2;
+}
+
+.event-message {
+    color: #777;
+    background-color: #f3e2c0;
+    font-size: 13px;
+    width: auto;
+    border-radius: 5px;
+    margin: auto;
+    padding: 4px 15px 4px 15px;
+    text-align: center;
+    clear: both;
+}
+
+.message-time {
+    font-size: 12px;
+    color: black;
+    position: absolute;
+    bottom: 5px;
+}
+
+.sender .message-time {
+    left: -62px;
+}
+.receiver .message-time {
+    right: -62px;
+}

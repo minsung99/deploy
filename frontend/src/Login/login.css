@@ -1,0 +1,103 @@
+/* 기본 스타일 설정 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFF4E6;
+}
+
+/* 로그인 컨테이너 */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #FFF4E6;
+}
+
+/* 제목 및 부제목 */
+.login-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.login-subtitle {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+/* 로그인 폼 */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* 입력 필드 컨테이너 */
+.login-input-container {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* 아이콘 */
+.login-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #888888;
+}
+
+/* 입력 필드 */
+.login-input {
+    width: 83%;
+    padding: 12px 12px 12px 36px;
+    border-radius: 10px;
+    border: 1px solid #DDDDDD;
+    background-color: #F4E1D2;
+    font-size: 14px;
+    color: #333333;
+}
+
+/* 로그인 버튼 */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #FF8C42;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* 비밀번호 찾기 버튼 */
+.forgot-password {
+    font-size: 14px;
+    color: #FF8C42;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+/* 푸터 */
+.login-footer {
+    font-size: 14px;
+    color: #666666;
+}
+
+.sign-up {
+    color: #FF8C42;
+    font-weight: bold;
+    cursor: pointer;
+}

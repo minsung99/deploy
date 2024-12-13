@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF4E6;
+}
+
+.name-popup-content {
+    background: #FFFFFF;
+    padding: 18px;
+    padding-top: 10px;
+    border-radius: 10px;
+    width: auto;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mypage-container {
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88vh;
+    flex-direction: column;
+    background-color: #FFF4E6;
+}
+
+.mypage-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.mypage-input {
+    display: none;
+}
+
+.mypage-favfood {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+.mypage-introduce {
+    font-size: 1rem;
+    color: #666;
+}
+
+.profile-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem auto;
+    max-width: 400px;
+    text-align: left;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem;
+    border: 3px solid #FF8C42;
+}
+
+.profile-score {
+    font-size: 1.2rem;
+    color: #FF8C42;
+    align-items: center;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.preference-badge {
+    display: inline-block;
+    background-color: #F4E1D2;
+    color: #333;
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    margin: 0.3rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.edit-button {
+    width: 130px;
+    background-color: #FF8C42;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.edit-name-container {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.edit-name-input {
+    width: 200px;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.edit-button:hover {
+    background-color: #E67E3A;
+}
+
+.name-save-button {
+    width: 100px;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #FF8C42;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.name-save-button:hover {
+    background-color: #E67E3A;
+}
+
+.name-close-button {
+    width: 100px;
+    margin-top: 20px;
+    padding: 12px;
+    margin-left: 15px;
+    background-color: #e3e1e1;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.name-close-button:hover {
+    background-color: #d4d2d2;
+}
+
+.logout-button {
+    color: #a09e9e;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+.logout-button:hover {
+    cursor: pointer;
+    color: #d4d2d2;
+}
+
+/* 로딩 중 텍스트를 중앙에 띄우는 스타일 */
+.is-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    background-color: rgba(255, 248, 235, 0.9); /* 콘텐츠 영역 배경 반투명 베이지 */
+    padding: 20px 40px; /* 텍스트 주변 여백 */
+    border-radius: 10px; /* 부드러운 모서리 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+    text-align: center;
+  }
+  
+  /* "로딩 중" 텍스트 스타일 */
+  .is-loading span {
+    font-size: 1.8rem; /* 적당히 큰 글씨 크기 */
+    font-weight: bold; /* 강조된 텍스트 */
+    color: #FF914D; /* 오렌지 컬러로 강조 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* 약간의 그림자 */
+  }

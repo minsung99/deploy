@@ -1,0 +1,131 @@
+** user api **
+
+#로그인
+Method: GET
+Url: /users/{email}/{pw}
+Response: 로그인한 유저 정보
+
+#유저 등록
+Method: POST
+Url: /users
+등록할 유저의 정보를 RequestBody에 담아 넘겨주어야 함.
+
+#유저 수정
+Method: PATCH
+Url: /users/{id}
+수정할 유저의 정보를 RequestBody에 담아 넘겨주어야 함.
+
+#id로 유저 조회
+Method: GET
+Url: /users/{id}
+Response: 해당 id를 가진 유저 정보
+
+#전체 유저 조회
+Method: GET
+Url: /users
+Response: 전체 유저 정보
+
+#id로 유저 삭제
+Method: DELETE
+Url: /users/delete/{id}
+Response: 해당 id를 가진 유저 삭제
+
+
+** menucategory api **
+
+#id로 메뉴 조회
+Method: GET
+Url: /menus/{id}
+Response: 해당 id를 가진 메뉴 정보
+
+#전체 메뉴 조회
+Method: GET
+Url: /menus
+Response: 전체 메뉴 정보
+
+
+** foodcategory api **
+
+#id로 음식 조회
+Method: GET
+Url: /food/{id}
+Response: 해당 id를 가진 음식 정보
+
+#전체 음식 조회
+Method: GET
+Url: /food
+Response: 전체 음식 정보
+
+
+** chatroom api **
+
+#채팅방 등록
+Method: POST
+Url: /chatrooms
+등록할 채팅방 정보를 RequestBody에 담아 넘겨주어야 함.
+
+#채팅방 수정
+Method: PATCH
+Url: /chatrooms/{id}
+수정할 채팅방 정보를 RequestBody에 담아 넘겨주어야 함.
+
+#id로 채팅방 조회
+Method: GET
+Url: /chatrooms/{id}
+Response: 해당 id를 가진 채팅방 정보
+
+#전체 채팅방 조회
+Method: GET
+Url: /chatrooms
+Response: 전체 채팅방 정보
+
+#id로 채팅방 삭제
+Method: DELETE
+Url: /chatrooms/delete/{id}
+Response: 해당 id를 가진 채팅방 삭제
+
+
+** chatpart api **
+
+#chatpart 등록
+Method: POST
+Url: /chatparts
+등록할 chatpart 정보를 RequestBody에 담아 넘겨주어야 함.
+
+#id로 chatpart 조회
+Method: GET
+Url: /chatparts/{userid}/{roomid}
+Response: 해당 id를 가진 chatpart 정보
+
+#전체 chatpart 조회
+Method: GET
+Url: /chatparts
+Response: 전체 chatpart 정보
+
+#id로 chatpart 삭제
+Method: DELETE
+Url: /chatparts/delete/{userid}/{roomid}
+Response: 해당 id를 가진 chatpart 삭제
+
+
+** message api **
+
+#메세지 등록
+Method: POST
+Url: /messages
+등록할 메세지 정보를 RequestBody에 담아 넘겨주어야 함.
+
+#id로 메세지 조회
+Method: GET
+Url: /messages/{id}
+Response: 해당 id를 가진 메세지 정보
+
+#유저id, 채팅방id로 메세지 조회
+Method: GET
+Url: /messages/{userid}/{roomid}
+Response: 해당 userid, roomid를 가진 메세지 정보
+
+#전체 메세지 조회
+Method: GET
+Url: /messages
+Response: 전체 메세지 정보

@@ -1,0 +1,135 @@
+/* 기본 스타일 설정 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFF4E6;
+}
+
+/* 회원가입 컨테이너 */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #FFF4E6;
+}
+
+/* 제목 및 부제목 */
+.register-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.register-subtitle {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* 회원가입 폼 */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* 입력 필드 컨테이너 */
+/* 기본 스타일 유지 */
+.register-input-container {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* 선호 음식을 선택하세요 칸에 예외적인 스타일 추가 */
+.register-input-container.select-menu-input {
+    display: flex;
+    align-items: center;
+}
+
+.register-input-container.select-menu-input input {
+    width: 100%;
+    padding: 12px 12px 12px 36px;
+    /* 왼쪽에 아이콘 공간 추가 */
+    border-radius: 10px;
+    border: 1px solid #DDDDDD;
+    background-color: #F4E1D2;
+    font-size: 14px;
+    color: #333333;
+    box-sizing: border-box;
+}
+
+/* 입력 필드 스타일 */
+.register-input {
+    width: 100%;
+    padding: 12px 12px 12px 36px;
+    /* 왼쪽에 아이콘 공간 추가 */
+    border-radius: 10px;
+    border: 1px solid #DDDDDD;
+    background-color: #F4E1D2;
+    font-size: 14px;
+    color: #333333;
+    box-sizing: border-box;
+}
+
+/* 아이콘 스타일 */
+.register-icon {
+    position: absolute;
+    left: 10px;
+    /* 아이콘의 왼쪽 여백 */
+    top: 50%;
+    /* 수직 가운데 정렬 */
+    transform: translateY(-50%);
+    font-size: 16px;
+    /* 아이콘 크기 */
+    color: #888888;
+}
+
+/* 아이콘 스타일 */
+.register-img-icon {
+    position: absolute;
+    left: 10px;
+    /* 아이콘의 왼쪽 여백 */
+    top: 88%;
+    /* 수직 가운데 정렬 */
+    transform: translateY(-50%);
+    font-size: 16px;
+    /* 아이콘 크기 */
+    color: #888888;
+}
+
+/* 회원가입 버튼 */
+.register-button {
+    width: 100%;
+    /* 버튼 너비를 입력 필드와 동일하게 설정 */
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #FF8C42;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* 회원가입 버튼 호버 효과 */
+.register-button:hover {
+    background-color: #E67E3A;
+}
+
+.register-profileimg {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem;
+    border: 3px solid #FF8C42;
+}
