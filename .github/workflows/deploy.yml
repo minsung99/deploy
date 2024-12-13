@@ -1,0 +1,74 @@
+name: Deploy to Cloudtype
+
+on:
+  push:
+    branches:
+      - Deploy  # Deploy 브랜치에 커밋 발생 시 실행
+
+jobs:
+  deploy-frontend:
+    name: Deploy Frontend (React)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Connect deploy key (Frontend)
+        uses: cloudtype-github-actions/connect@v1
+        with:
+          token: ${{ secrets.CLOUDTYPE_TOKEN }}
+          ghtoken: ${{ secrets.GHP_TOKEN }}
+
+      - name: Deploy Frontend
+        uses: cloudtype-github-actions/deploy@v1
+        with:
+          token: ${{ secrets.CLOUDTYPE_TOKEN }}
+          project: minsung99/2024-02-csc4004-2-3-chiikawa
+          stage: frontend
+          yaml: |
+            name: frontend
+            app: web
+            options:
+              nodeversion: "22"
+              spa: false
+              buildenv: []
+              rewrites: []
+              build: npm run build
+              install: npm install && npm install -g serve
+            context:
+              git:
+                url: git@github.com:${{ github.repository }}.git
+                ref: ${{ github.ref }}
+              preset: react
+
+  deploy-backend:
+    name: Deploy Backend (Spring Boot)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Connect deploy key (Backend)
+        uses: cloudtype-github-actions/connect@v1
+        with:
+          token: ${{ secrets.CLOUDTYPE_TOKEN }}
+          ghtoken: ${{ secrets.GHP_TOKEN }}
+
+      - name: Deploy Backend
+        uses: cloudtype-github-actions/deploy@v1
+        with:
+          token: ${{ secrets.CLOUDTYPE_TOKEN }}
+          project: minsung99/2024-02-csc4004-2-3-chiikawa
+          stage: backend
+          yaml: |
+            name: backend
+            app: java@21
+            options:
+              ports: 8080
+              env: []
+              buildenv: []
+            context:
+              git:
+                url: git@github.com:${{ github.repository }}.git
+                ref: ${{ github.ref }}
+              preset: java-springboot
